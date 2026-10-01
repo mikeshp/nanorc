@@ -66,9 +66,11 @@ color cyan "\<(this)\>"
 color brightred "\<(NULL|EOF)\>"
 color cyan "\<(stdin|stdout|stderr)\>"
 ## Numbers
-color cyan "\<[0-9]+\.?[0-9]*[eE][+-]?[0-9]+[fF]?\>"
-color cyan "\<0[xX][0-9a-fA-F]+[uUlL]*\>"
-color cyan "\<[0-9]+(\.[0-9]+)?\>"
+icolor cyan "\<[0-9]+((\.[0-9]+)|(llu|ull|ul|lu|ll|l|u))?\>"
+icolor cyan "\<[0-9]+\.?[0-9]*[e][+-]?[0-9]+[f]?\>"
+icolor cyan "\<0[x][0-9a-f]+(llu|ull|ul|lu|ll|l|u)?\>"
+icolor cyan "\<0[0-7]+(llu|ull|ul|lu|ll|l|u)?\>"
+icolor cyan "\<0[b][0-1]+(llu|ull|ul|lu|ll|l|u)?\>"
 
 # =======================================
 #  Built-in Functions
