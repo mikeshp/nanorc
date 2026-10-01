@@ -32,3 +32,6 @@ make sure **extra** is included *after* it in **etc/nanorc** to override it:<br>
 `include "/usr/share/nano-syntax-highlighting/*.nanorc"`<br>
 `include "/usr/share/nano/extra/*.nanorc"`<br>
 Otherwise, comment out the corresponding line.
+---
+## Known issues
+* **C.nanorc**: a dot in float with no preceding digits such as `.42` will not highlight itself as part of the number, but follow punctuation rule.
