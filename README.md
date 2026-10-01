@@ -13,8 +13,8 @@ Some were later modified to my own liking, some rewritten entirely from scratch.
 * **Avoid "fruit salad" effect**: kept minimal to only highlight what is necessary.
 * **Easy to customize**: clearly structured to toggle features on/off via comments.
 ## Additional Notes
-* **Tabs**: use hard tabs for indentation, not the spaces, the default 8 characters width.
-* **WebDev**: change tab width for webdev languages via Bash alias wrapper (not included here).
+* **Hard Tabs**: use the default 8 characters width hard tabs for indentation.
+* **WebDev**: change tab width for webdev languages via Bash alias (not included here).
 * **Dark themes**: prioritize white-on-black profiles, may get incompatible for black-on-white.
 * **Updates**: update the languages I mostly use right now: C, Pascal, Bash, PHP, HTML, CSS.
 * **Future updates**: expect sometime later: Ruby, Perl, Python, Go, Crystal, JavaScript, Lua.
@@ -35,3 +35,4 @@ Otherwise, comment out the corresponding line.
 ---
 ## Known issues
 * **C.nanorc**: a dot in float with no preceding digits such as `.42` will not highlight itself as part of the number, but follow punctuation rule.
+* **C.nanorc**: a line break \ in the middle of a string literal will break the literal's highlighting from the new line.
