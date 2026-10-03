@@ -10,18 +10,26 @@ magic "makefile script"
 tabgives "	"
 comment "#"
 
+# Targets.
+#color brightblue "^[^	].*:"
+color brightblue "^[^	]+:([^=]|$)"
+
+# Built-in special targets.
+color cyan "\.\<(DEFAULT|IGNORE|SILENT|DELETE_ON_ERROR|EXPORT_ALL_VARIABLES|PRECIOUS|SECONDARY|NOTPARALLEL)\>"
+
+# .PHONY
+color blue "\.\<PHONY\>"
+
 # Assignments.
-color red " (:?:|\+|\?)?= "
+color yellow " (:?:|\+|\?)?= "
 
 # Keywords.
 color magenta "^(if|ifn?def|ifn?eq|else|endif|(-|s)?include)\>"
-color magenta "^((override +)?(un)?define|endef|(un)?export|private|vpath)\>"
+#color magenta "^((override +)?(un)?define|endef|(un)?export|private|vpath)\>"
+color magenta "\<(override|(un)?define|endef|(un)?export|private|vpath)\>"
 
 # Variable expansions.
-color blue "\$+[{(][a-zA-Z0-9_-]+[})]"
-
-# Targets.
-color brightblue "^[^	].*:"
+color brightgreen "\$+[{(][a-zA-Z0-9_-]+[})]"
 
 # Comments.
 color green "(^|[[:blank:]]+)#.*"
