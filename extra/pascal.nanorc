@@ -10,7 +10,7 @@ syntax "pascal" "\.(pas|pp|lpr)$"
 comment "//"
 
 # Numbers
-color brightcyan "\<[0-9]+(\.[0-9]+)?\>"
+color cyan "\<[0-9]+(\.[0-9]+)?\>"
 
 # Reserved Keywords Turbo Pascal
 icolor brightblue "\<(and|array|asm|begin|break|case|const|constructor|continue|destructor|div|do|downto|else|end|false|file|for|function|goto|if|implementation|in|inline|interface|label|mod|nil|not|object|of|on|operator|or|packed|procedure|program|record|repeat|set|shl|shr|then|to|true|type|unit|until|uses|var|while|with|xor)\>"
@@ -74,18 +74,18 @@ icolor brightblue "\<(to|downto)\>"
 # Brackets
 color brightgreen "[)(]"
 # Squares
-#color yellow "[][]"
+color green "[][]"
 
 # Text Strings
 color brightmagenta "'([^']|'')*'"
 
 # Comments
-color cyan "//.*$"
-color cyan start="\{" end="\}"
-color cyan start="\(\*" end="\*\)"
+color brightcyan "//.*$"
+color brightcyan start="\{" end="\}"
+color brightcyan start="\(\*" end="\*\)"
 
 # Compiler directives
 color magenta start="\{\$" end="\}"
 
 # Reminders
-icolor black,cyan "\<(fixme|todo|xxx)\>"
+icolor black,lightcyan "\<(fixme|todo|xxx)\>"
