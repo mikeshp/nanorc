@@ -10,11 +10,16 @@ magic "makefile script"
 tabgives "	"
 comment "#"
 
-# Targets.
-color brightblue "^[A-Za-z0-9_.-]+[[:space:]]*:([^=]|$)"
+# Targets, special symbols and punctuation.
+#color brightgreen "%"
+#color brightgreen "@"
+color brightblue "^[A-Za-z0-9_./%()-]+[[:space:]]*:([^=]|$)"
+color brightblue "[:;]"
+color blue "\\$"
+color cyan "^	[@-][a-zA-Z0-9_-]+?"
 
 # Built-in special targets.
-color cyan "\.\<(DEFAULT|IGNORE|SILENT|DELETE_ON_ERROR|EXPORT_ALL_VARIABLES|PRECIOUS|SECONDARY|NOTPARALLEL)\>"
+color brightred "\.\<(DEFAULT|IGNORE|SILENT|DELETE_ON_ERROR|EXPORT_ALL_VARIABLES|PRECIOUS|SECONDARY|NOTPARALLEL)\>"
 
 # .PHONY
 color blue "\.\<PHONY\>"
@@ -23,15 +28,28 @@ color blue "\.\<PHONY\>"
 color yellow " (:?:|\+|\?)?= "
 
 # Keywords.
-color magenta "^(if|ifn?def|ifn?eq|else|endif|(-|s)?include)\>"
-color magenta "\<(override|(un)?define|endef|(un)?export|private|vpath)\>"
+color green "^[[:space:]]*(-include|sinclude|include|if|ifn?def|ifn?eq|else|endif)\>"
+color green "\<(override|(un)?define|endef|(un)?export|private|vpath)\>"
+
+# Fix whatever is inside the quotes and parenthesis.
+color normal ""[^"]*""
+color normal "\([^)]*\)"
 
 # Variable expansions.
 color brightgreen "\$+[{(][a-zA-Z0-9_-]+[})]"
 color brightgreen "\$+[@^<$?*]?"
 
+# Compiler flags.
+#color green "\s-[DILloOSv]"
+
+# Native text utilities.
+color green "\<(addprefix|filter)\>"
+
+# Bash flow control.
+color green "\<(for|in|do|done|then|if|else|fi|while|case|esac)\>"
+
 # Comments.
-color green "(^|[[:blank:]]+)#.*"
+color magenta "(^|[[:blank:]]+)#.*"
 
 # Trailing whitespace.
 color ,green "[[:space:]]+$"
