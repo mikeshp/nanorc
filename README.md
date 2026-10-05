@@ -1,6 +1,6 @@
-# NANORC
+# Nanorc
 
-Custom nanorc configuration files for that pretty syntax highlighting in Nano.<br>
+**Custom nanorc configuration files for that pretty syntax highlighting in Nano.**<br>
 
 These files were gathered from various sources across the Internet.<br>
 Some were later modified to my own liking, some rewritten entirely from scratch.
