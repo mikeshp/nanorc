@@ -11,12 +11,12 @@ tabgives "	"
 comment "#"
 
 # Targets, special symbols and punctuation.
-#color brightgreen "%"
-#color brightgreen "@"
+#color cyan "%"
+color blue "@"
 color brightblue "^[A-Za-z0-9_./%()-]+[[:space:]]*:([^=]|$)"
 color brightblue "[:;]"
 color blue "\\$"
-color cyan "^	[@-][a-zA-Z0-9_-]+?"
+#color cyan "^	[@-][a-zA-Z0-9_-]+?"
 
 # Built-in special targets.
 color brightred "\.\<(DEFAULT|IGNORE|SILENT|DELETE_ON_ERROR|EXPORT_ALL_VARIABLES|PRECIOUS|SECONDARY|NOTPARALLEL)\>"
