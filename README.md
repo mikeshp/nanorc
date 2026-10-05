@@ -36,3 +36,4 @@ Otherwise, comment out the corresponding line.
 ## Known issues
 * **C.nanorc**: a dot in float with no preceding digits such as `.42` will not highlight itself as part of the number, but follow punctuation rule.
 * **C.nanorc**: a line break \ in the middle of a string literal will break the literal's highlighting from the new line.
+* **Makefile.nanorc**: brackets () inside other brackets () will break the rule to clear colors for the outer brackets.
