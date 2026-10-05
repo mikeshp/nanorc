@@ -46,7 +46,7 @@ color brightgreen "\$+[@^<$?*]?"
 color green "\<(addprefix|filter)\>"
 
 # Bash flow control.
-color green "\<(for|in|do|done|then|if|else|fi|while|case|esac)\>"
+color green "\<(for|in|do|done|then|if|elif|else|fi|while|case|esac)\>"
 
 # Comments.
 color magenta "(^|[[:blank:]]+)#.*"
