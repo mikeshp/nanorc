@@ -87,5 +87,8 @@ color yellow start="\(\*" end="\*\)"
 # Compiler directives
 color magenta start="\{\$" end="\}"
 
+# Trailing whitespace
+color ,green "[[:space:]]+$"
+
 # Reminders
 icolor black,yellow "\<(fixme|todo|xxx)\>"
