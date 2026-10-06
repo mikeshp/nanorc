@@ -49,8 +49,8 @@ icolor brightgreen "\<(sizeof)\>"
 icolor yellow "\<(ord|chr|str|strtoint(def)?|strtofloat|val|(int|float)+tostr)\>"
 
 # Special Constants
-icolor brightred "\<(true|false)\>"
-icolor brightred "\<(nil|nan|pi|infinity)\>"
+icolor cyan "\<(true|false)\>"
+icolor cyan "\<(nil|nan|pi|infinity)\>"
 
 # Special reserved words
 icolor magenta "\<(Result|self)\>"
@@ -80,12 +80,12 @@ color green "[][]"
 color brightmagenta "'([^']|'')*'"
 
 # Comments
-color brightcyan "//.*$"
-color brightcyan start="\{" end="\}"
-color brightcyan start="\(\*" end="\*\)"
+color red "//.*$"
+color red start="\{" end="\}"
+color red start="\(\*" end="\*\)"
 
 # Compiler directives
 color magenta start="\{\$" end="\}"
 
 # Reminders
-icolor black,lightcyan "\<(fixme|todo|xxx)\>"
+icolor black,cyan "\<(fixme|todo|xxx)\>"
