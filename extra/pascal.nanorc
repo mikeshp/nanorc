@@ -32,7 +32,12 @@ icolor brightblue "\<(record|class|object|set|array|of|variant|interface|enum)\>
 icolor brightblue "\<(set|array|of|variant|enum)\>"
 
 # Other
-icolor yellow "\<(upcase|lowercase|assignfile|Close|ParamStr|ParamCount|Length|SetLength|Inc|Dec|GetUserDir|Assign|Rewrite|CompareStr|Delete|CompareText|Pos|LeftStr|RightStr|Copy|FileExists|Reset|ReadLn|Read|WriteLn|Write|Eof|Eol|Nil|ClrScr|TextColor|TextBackground)\>"
+icolor yellow "\<(upcase|lowercase|assignfile|Close|ParamStr|ParamCount|Length|SetLength|Inc|Dec|GetUserDir|Assign|Rewrite|CompareStr|Delete|CompareText|Pos|LeftStr|RightStr|Copy|FileExists|Reset|ReadLn|Read|WriteLn|Write|Eof|Eol|Nil)\>"
+
+# Crt commands
+icolor yellow "\<(clrscr|textcolor|textbackground|gotoxy)\>"
+# Crt variables
+icolor green "\<(screen(height|width))\>"
 
 # Math functions
 icolor yellow "\<(floor|ceil|abs|arctan|sin|cos|sincos|dec|inc|exp|frac|hi|int|ln|lo|odd|pi|round|sqr|sqrt|swap|trunc|ord|succ|pred|low|high|chr)\>"
