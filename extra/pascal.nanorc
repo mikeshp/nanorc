@@ -92,7 +92,7 @@ color red start="\(\*" end="\*\)"
 color magenta start="\{\$" end="\}"
 
 # Trailing whitespace
-color ,red "[[:space:]]+$"
+color ,green "[[:space:]]+$"
 
 # Reminders
 icolor black,green "\<(fixme|todo|xxx)\>"
