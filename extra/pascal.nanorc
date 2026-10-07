@@ -32,21 +32,21 @@ icolor brightblue "\<(record|class|object|set|array|of|variant|interface|enum)\>
 icolor brightblue "\<(set|array|of|variant|enum)\>"
 
 # Other
-icolor brightred "\<(upcase|lowercase|assignfile|Close|ParamStr|ParamCount|Length|SetLength|Inc|Dec|GetUserDir|Assign|Rewrite|CompareStr|Delete|CompareText|Pos|LeftStr|RightStr|Copy|FileExists|Reset|ReadLn|Read|WriteLn|Write|Eof|Eol|Nil|ClrScr|TextColor|TextBackground)\>"
+icolor yellow "\<(upcase|lowercase|assignfile|Close|ParamStr|ParamCount|Length|SetLength|Inc|Dec|GetUserDir|Assign|Rewrite|CompareStr|Delete|CompareText|Pos|LeftStr|RightStr|Copy|FileExists|Reset|ReadLn|Read|WriteLn|Write|Eof|Eol|Nil|ClrScr|TextColor|TextBackground)\>"
 
 # Math functions
-icolor brightred "\<(floor|ceil|abs|arctan|sin|cos|sincos|dec|inc|exp|frac|hi|int|ln|lo|odd|pi|round|sqr|sqrt|swap|trunc|ord|succ|pred|low|high|chr)\>"
-icolor brightred "\<(random(ize)?|randseed)\>"
+icolor yellow "\<(floor|ceil|abs|arctan|sin|cos|sincos|dec|inc|exp|frac|hi|int|ln|lo|odd|pi|round|sqr|sqrt|swap|trunc|ord|succ|pred|low|high|chr)\>"
+icolor yellow "\<(random(ize)?|randseed)\>"
 
 # File Handling
-icolor brightred "\<(eol|eoln|eof|seekeoln|seekeof|assign|append|close|closefile|reset|rewrite|seek|blockread|blockwrite|chdir|concat|copy|seek|filepos|eof|rename|flush|erase)\>"
+icolor yellow "\<(eol|eoln|eof|seekeoln|seekeof|assign|append|close|closefile|reset|rewrite|seek|blockread|blockwrite|chdir|concat|copy|seek|filepos|eof|rename|flush|erase)\>"
 
 # Memory Operations
-icolor brightred "\<(addr|assigned|dispose|fillchar|freemem|getmem|move|new|reallocmem)\>"
+icolor yellow "\<(addr|assigned|dispose|fillchar|freemem|getmem|move|new|reallocmem)\>"
 icolor brightgreen "\<(sizeof)\>"
 
 # Casting and Parsing routines
-icolor brightred "\<(ord|chr|str|strtoint(def)?|strtofloat|val|(int|float)+tostr)\>"
+icolor yellow "\<(ord|chr|str|strtoint(def)?|strtofloat|val|(int|float)+tostr)\>"
 
 # Special Constants
 icolor cyan "\<(true|false)\>"
@@ -57,7 +57,7 @@ icolor green "\<(stdin|stdout|stderr|input|output)\>"
 icolor magenta "\<(Result|self)\>"
 icolor green "\<(self)\>"
 # Special reserved methods
-icolor brightred "\<(create|destroy|clear|free)\>"
+icolor yellow "\<(create|destroy|clear|free)\>"
 
 # Flow control
 icolor magenta "\<(break|continue|exit|label|goto|halt)\>"
@@ -84,9 +84,9 @@ color green "[][]"
 color brightmagenta "'([^']|'')*'"
 
 # Comments
-color yellow "//.*$"
-color yellow start="\{" end="\}"
-color yellow start="\(\*" end="\*\)"
+color red "//.*$"
+color red start="\{" end="\}"
+color red start="\(\*" end="\*\)"
 
 # Compiler directives
 color magenta start="\{\$" end="\}"
@@ -95,4 +95,4 @@ color magenta start="\{\$" end="\}"
 color ,green "[[:space:]]+$"
 
 # Reminders
-icolor black,yellow "\<(fixme|todo|xxx)\>"
+icolor black,green "\<(fixme|todo|xxx)\>"
