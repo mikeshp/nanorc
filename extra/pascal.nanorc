@@ -16,7 +16,7 @@ color cyan "\<[0-9]+(\.[0-9]+)?\>"
 icolor brightblue "\<(and|array|asm|begin|break|case|const|constructor|continue|destructor|div|do|downto|else|end|false|file|for|function|goto|if|implementation|in|inline|interface|label|mod|nil|not|object|of|on|operator|or|packed|procedure|program|record|repeat|set|shl|shr|then|to|true|type|unit|until|uses|var|while|with|xor)\>"
 
 # Reserved Keywords Object Pascal
-icolor brightblue "\<(as|class|constref|dispose|except|exit|exports|finalization|finally|inherited|initialization|is|library|new|on|out|property|raise|self|threadvar|try)\>"
+icolor brightblue "\<(as|class|constref|dispose|except|exit|exports|finalization|finally|inherited|initialization|is|library|new|on|out|property|raise|self|resourcestring|threadvar|try)\>"
 
 # Modifiers
 icolor magenta "\<(absolute|abstract|alias|assembler|cdecl|cppdecl|default|export|external|forward|generic|index|local|nostackframe|oldfpccall|override|pascal|private|protected|public|published|register|reintroduce|safecall|softfloat|specialize|stdcall|virtual|far|near)\>"
@@ -68,7 +68,7 @@ icolor yellow "\<(create|destroy|clear|free)\>"
 icolor magenta "\<(break|continue|exit|label|goto|halt)\>"
 
 # Block flow control
-icolor blue "\<(interface|implementation|finalize|initialization)\>"
+icolor blue "\<(interface|implementation|finalization|initialization)\>"
 
 # Operators
 color brightyellow "[][}{)(,.;:/=+*!?`^@&~><-]+"
