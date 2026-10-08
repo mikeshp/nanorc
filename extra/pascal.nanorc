@@ -35,9 +35,9 @@ icolor brightblue "\<(set|array|of|variant|enum)\>"
 icolor yellow "\<(upcase|lowercase|assignfile|Close|ParamStr|ParamCount|Length|SetLength|Inc|Dec|GetUserDir|Assign|Rewrite|CompareStr|Delete|CompareText|Pos|LeftStr|RightStr|Copy|FileExists|Reset|ReadLn|Read|WriteLn|Write|Eof|Eol|Nil)\>"
 
 # Crt commands
-icolor yellow "\<(clrscr|textcolor|textbackground|gotoxy)\>"
+icolor yellow "\<(assigncrt|clr(scr|eol)|del(ay|line)|(high|low|norm)video|(no)?sound|insline|readkey|keypressed|text(color|background)|gotoxy|where(x|y)|window)\>"
 # Crt variables
-icolor green "\<(screen(height|width))\>"
+icolor green "\<(screen(height|width)|check(break|eof|snow)|directvideo|lastmode|textattr|wind(max|min|maxx|maxy|minx|miny))\>"
 
 # Math functions
 icolor yellow "\<(floor|ceil|abs|arctan|sin|cos|sincos|dec|inc|exp|frac|hi|int|ln|lo|odd|pi|round|sqr|sqrt|swap|trunc|ord|succ|pred|low|high|chr)\>"
