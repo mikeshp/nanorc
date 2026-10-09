@@ -22,22 +22,28 @@ icolor brightblue "\<(as|class|constref|dispose|except|exit|exports|finalization
 icolor magenta "\<(absolute|abstract|alias|assembler|cdecl|cppdecl|default|export|external|forward|generic|index|local|nostackframe|oldfpccall|override|pascal|private|protected|public|published|register|reintroduce|safecall|softfloat|specialize|stdcall|virtual|far|near)\>"
 
 # DataTypes
-icolor green "\<(string|integer|(u|p)?int(8|16|32|64)|real|currency|extended|single|double|char|byte|cardinal|boolean|(long|d|q)?word|longint|textfile|file|text|pointer)\>"
+icolor green "\<((u|p)?int(8|16|32|64)|real|currency|extended|single|double|(p)?(char|byte|cardinal|integer|string)|boolean|(long|p|pq|d|q)?word|(p)?longint|textfile|file|text|pointer)\>"
 # More Int DataTypes
 icolor green "\<((native|ptr|size)+u?int|(small|short|long)+int)\>"
 # More String DataTypes
-icolor green "\<p?(ansi|short|unicode|wide)+(string|char)\>"
+icolor green "\<p?(ansi|short|unicode|wide)?+(string|char)\>"
 # Structured DataTypes
 icolor brightblue "\<(record|class|object|set|array|of|variant|interface|enum)\>"
 icolor brightblue "\<(set|array|of|variant|enum)\>"
 
 # Other
-icolor yellow "\<(upcase|lowercase|assignfile|Close|ParamStr|ParamCount|Length|SetLength|Inc|Dec|GetUserDir|Assign|Rewrite|CompareStr|Delete|CompareText|Pos|LeftStr|RightStr|Copy|FileExists|Reset|ReadLn|Read|WriteLn|Write|Eof|Eol|Nil)\>"
+icolor yellow "\<((up|lower)case|assignfile|Close|Param(Str|Count)|(Set)?Length|Inc|Dec|GetUserDir|Assign|Rewrite|CompareStr|Delete|CompareText|Pos|(Left|Right)Str|Copy|FileExists|Reset|Read(ln)?|Write(ln)?|Eof|Eol|Nil)\>"
 
 # Crt commands
 icolor yellow "\<(assigncrt|clr(scr|eol)|del(ay|line)|(high|low|norm)video|(no)?sound|insline|readkey|keypressed|text(color|background)|gotoxy|where(x|y)|window)\>"
 # Crt variables
 icolor green "\<(screen(height|width)|check(break|eof|snow)|directvideo|lastmode|textattr|wind(max|min|maxx|maxy|minx|miny))\>"
+
+# BaseUnix
+icolor yellow "\<(fpwrite)\>"
+
+# SysUtils
+icolor yellow "\<(StringOfChar)\>"
 
 # Math functions
 icolor yellow "\<(floor|ceil|abs|arctan|sin|cos|sincos|dec|inc|exp|frac|hi|int|ln|lo|odd|pi|round|sqr|sqrt|swap|trunc|ord|succ|pred|low|high|chr)\>"
