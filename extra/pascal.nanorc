@@ -80,6 +80,7 @@ icolor cyan "\<(true|false)\>"
 icolor cyan "\<(nil|nan|pi|infinity|unassigned)\>"
 # Special predefined variables
 icolor green "\<(stdin|stdout|stderr|input|output)\>"
+icolor green "\<(LineEnding|(Directory|Path)Separator|Param(Str|Count))\>"
 # Special reserved words
 icolor magenta "\<(Result|self)\>"
 icolor green "\<(self)\>"
