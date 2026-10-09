@@ -70,7 +70,7 @@ icolor yellow "\<(eol|eoln|eof|seekeoln|seekeof|assign|append|close|closefile|re
 
 # Memory Operations
 icolor yellow "\<(addr|assigned|dispose|fillchar|freemem|getmem|move|new|reallocmem)\>"
-icolor yellow "\<(assigned|sizeof|(set)?length)\>"
+icolor green "\<(assigned|sizeof|(set)?length)\>"
 
 # Casting and Parsing routines
 icolor yellow "\<(insert|delete|ord|chr|str|strtoint(def)?|strtofloat|pos|val|(int|float)+tostr)\>"
