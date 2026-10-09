@@ -46,7 +46,7 @@ icolor yellow "\<((up|lower)case|assignfile|Close|Param(Str|Count)|(Set)?Length|
 # Crt commands
 icolor yellow "\<(assigncrt|clr(scr|eol)|del(ay|line)|(high|low|norm)video|(no)?sound|insline|readkey|keypressed|text(color|background)|gotoxy|where(x|y)|window)\>"
 # Crt variables
-icolor green "\<(screen(height|width)|check(break|eof|snow)|directvideo|lastmode|textattr|wind(max|min|maxx|maxy|minx|miny))\>"
+icolor green "\<(screen(height|width)|check(break|eof|snow)|directvideo|textattr|wind(max|min|maxx|maxy|minx|miny))\>"
 
 # BaseUnix Routines
 ## File and firectory management
