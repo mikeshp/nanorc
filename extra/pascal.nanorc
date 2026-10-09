@@ -30,6 +30,15 @@ icolor green "\<p?(ansi|short|unicode|wide)?+(string|char)\>"
 # Structured DataTypes
 icolor brightblue "\<(record|class|object|set|array|of|variant|interface|enum)\>"
 icolor brightblue "\<(set|array|of|variant|enum)\>"
+# BaseUnix Types
+## File amd I/O containers
+icolor green "\<(TStat|stat|TFlock|flock|TPollFD|pollfd|TUtimbuf|utimbuf|TTimeVal|timeval|TTimeSpec|timespec)\>"
+## Signals and System state
+icolor green "\<(TSigAction|sigaction|TSigSet|sigset_t|TTIOCPGRP|TFDSet|fd_set|T_TMS|tms|TUname|utsname)\>"
+## Pointers and Kernel alaises
+icolor green "\<((p)+(Stat|Flock|Utimbuf|TimeVal|TimeSpec|SigAction|SigSet|FDSet|_TMS|Uname))\>"
+## Integers and Architecture primitives
+icolor green "\<(TCint|cint|TCsShort|csshort|TCuChar|cuchar|TCuInt|cuint|TCuInt16|cuint16|TCuInt32|cuint32|pcslonglong|pcsshort|pcuchar|pcuint|pcuint16|pcuint32|TDev|dev_t|TGid|gid_t|TIno|ino_t|TMode|mode_t|TNlink|nlink_t|TOff|off_t|TPid|pid_t|TSize|size_t|TSsize|ssize_t|TUid|uid_t|TClock|clock_t|TTime|time_t)\>"
 
 # Other
 icolor yellow "\<((up|lower)case|assignfile|Close|Param(Str|Count)|(Set)?Length|Inc|Dec|GetUserDir|Assign|Rewrite|CompareStr|Delete|CompareText|Pos|(Left|Right)Str|Copy|FileExists|Reset|Read(ln)?|Write(ln)?|Eof|Eol|Nil)\>"
@@ -39,8 +48,15 @@ icolor yellow "\<(assigncrt|clr(scr|eol)|del(ay|line)|(high|low|norm)video|(no)?
 # Crt variables
 icolor green "\<(screen(height|width)|check(break|eof|snow)|directvideo|lastmode|textattr|wind(max|min|maxx|maxy|minx|miny))\>"
 
-# BaseUnix
-icolor yellow "\<(fpwrite)\>"
+# BaseUnix Routines
+## File and firectory management
+icolor yellow "\<((fp)+(Access|Chdir|Chmod|Chown|Close|FChmod|FChown|FStat|Ftruncate|Getcwd|LSeek|LStat|Mkdir|Open|Read|ReadLink|Rename|Rmdir|Stat|Symlink|Truncate|Unlink|Write|WriteV|UTime))\>"
+## Process and system management
+icolor yellow "\<(CreateShellArgV|FreeShellArgV|(fp)+(Alarm|Execv|Execve|Execvp|Exit|Fork|Getegid|Getenv|Geteuid|Getgid|Getgroups|Getpgrp|Getpid|Getppid|Getpriority|Getuid|Kill|Pause|Setgid|Setpgid|Setpriority|Setsid|Setuid|Sleep|Times|Umask|Uname|Wait|WaitPid))\>"
+## Signals and memory allocation
+icolor yellow "\<((fp)+(Sigaction|Signal|Sigpending|Sigprocmask|Sigsuspend|mmap|munmap|geterrno|time))\>"
+## Evaluation macros (?)
+icolor yellow "\<((fp)+(S_ISBLK|S_ISCHR|S_ISDIR|S_ISFIFO|S_ISLNK|S_ISREG|S_ISSOCK)|(w)+)exitStatus|ifexited|ifsignaled|ifstopped|stopsig|termsig))\>"
 
 # SysUtils
 icolor yellow "\<(StringOfChar)\>"
@@ -69,6 +85,25 @@ icolor magenta "\<(Result|self)\>"
 icolor green "\<(self)\>"
 # Special reserved methods
 icolor yellow "\<(create|destroy|clear|free)\>"
+# BaseUtils macros and constants
+## Standard streams
+icolor green "\<((STDIN_|STDOUT_|STDERR_)FILENO)\>"
+## File open modes and flags
+icolor green "\<(O_(RDONLY|WRONLY|RDWR|ACCMODE|CREAT|EXCL|NOCTTY|TRUNC|APPEND|NONBLOCK|NDELAY|SYNC|FSYNC|ASYNC|DIRECTORY|NOFOLLOW|CLOEXEC|LARGEFILE))\>"
+## File status attributes
+icolor green "\<(S_(IRWXU|IRUSR|IWUSR|IXUSR|IRWXG|IRGRP|IWGRP|IXGRP|IRWXO|IROTH|IWOTH|IXOTH|ISUID|ISGID|ISVTX))\>"
+## File system node qualifiers
+icolor green "\<(STAT_IF(MT|SOCK|LNK|REG|BLK|DIR|CHR|IFO))\>"
+## Access operations and seekers
+icolor green "\<(F_OK|X_OK|W_OK|R_OK|SEEK_SET|SEEK_CUR|SEEK_END)\>"
+## Process priority flags
+icolor green "\<(PRIO_PROCESS|PRIO_PGRP|PRIO_USER)\>"
+## Memory map protocol targets
+icolor green "\<(PROT_READ|PROT_WRITE|PROT_EXEC|PROT_NONE|MAP_SHARED|MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS|MAP_ANON)\>"
+## Standard POSIX system signals
+icolor green "\<(SIG(HUP|INT|QUIT|ILL|TRAP|ABRT|IOT|BUS|FPE|KILL|USR1|SEGV|USR2|PIPE|ALRM|TERM|STKFLT|CHLD|CONT|STOP|TSTP|TTIN|TTOU|URG|XCPU|XFSZ|VTALRM|PROF|WINCH|IO|POLL|PWR|SYS|_BLOCK|_UNBLOCK|_SETMASK|_DFL|_ERR|_IGN))\>"
+## Wait and exit status parameters
+icolor green "\<(WNOHANG|WUNTRACED)\>"
 
 # Flow control
 icolor magenta "\<(break|continue|exit|label|goto|halt)\>"
