@@ -85,7 +85,7 @@ icolor magenta "\<(Result|self)\>"
 icolor green "\<(self)\>"
 # Special reserved methods
 icolor yellow "\<(create|destroy|clear|free)\>"
-# BaseUtils macros and constants
+# BaseUnix macros and constants
 ## Standard streams
 icolor green "\<((STDIN_|STDOUT_|STDERR_)FILENO)\>"
 ## File open modes and flags
