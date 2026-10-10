@@ -19,7 +19,8 @@ color green "\<(break|case|continue|do|done|elif|else|esac|exit|fi|for|function|
 color brightred "\<(return|exit|break)\>"
 color green "\<(kill|pkill|killall)\>"
 color green "\<(declare|eval|exec|export|let|local)\>"
-color green "[][{}():;|`$<>+~*/!=&\\-]"
+#color green "[][{}():;|`$<>+~*/!=&\\-]"
+color green "[][{}():;,|`$<>~!=\\&]"
 #color yellow "[][{}()$`'\"]"
 color green "-(eq|ne|gt|lt|ge|le|ef|ot|nt)\>"
 
