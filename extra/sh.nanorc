@@ -12,23 +12,22 @@ comment "#"
 linter dash -n
 
 # Function declarations.
-color brightgreen "^[A-Za-z0-9_-]+\(\)"
+#color brightgreen "^[A-Za-z0-9_-]+\(\)"
 
 # Keywords, symbols, and comparisons.
 color green "\<(break|case|continue|do|done|elif|else|esac|exit|fi|for|function|if|in|read|return|select|shift|then|time|until|while)\>"
 color brightred "\<(return|exit|break)\>"
 color green "\<(declare|eval|exec|export|let|local)\>"
-color green "[][{}():;|`$<>+-~\*/!=&\]"
+color green "[][{}():;|`$<>+~*/!=&\\-]"
 #color yellow "[][{}()$`'\"]"
-#color green "[;\]"
 color green "-(eq|ne|gt|lt|ge|le|ef|ot|nt)\>"
 
 # Numbers
-icolor cyan "\<[0-9]+((\.[0-9]+)|(llu|ull|ul|lu|ll|l|u))?\>"
-icolor cyan "\<[0-9]+\.?[0-9]*[e][+-]?[0-9]+[f]?\>"
-icolor cyan "\<0[x][0-9a-f]+(llu|ull|ul|lu|ll|l|u)?\>"
-icolor cyan "\<0[0-7]+(llu|ull|ul|lu|ll|l|u)?\>"
-icolor cyan "\<0[b][0-1]+(llu|ull|ul|lu|ll|l|u)?\>"
+icolor brightred "\<[0-9]+((\.[0-9]+)|(llu|ull|ul|lu|ll|l|u))?\>"
+icolor brightred "\<[0-9]+\.?[0-9]*[e][+-]?[0-9]+[f]?\>"
+icolor brightred "\<0[x][0-9a-f]+(llu|ull|ul|lu|ll|l|u)?\>"
+icolor brightred "\<0[0-7]+(llu|ull|ul|lu|ll|l|u)?\>"
+icolor brightred "\<0[b][0-1]+(llu|ull|ul|lu|ll|l|u)?\>"
 
 # Short and long options.
 color green "[[:blank:]](-[A-Za-z]|--\<[A-Za-z-]+)\>"
@@ -46,6 +45,7 @@ color yellow "\$([-@*#?$!0-9]|[[:alpha:]_][[:alnum:]_]*)"
 color yellow "\$\{[#!]?([-@*#?$!]|[0-9]+|[[:alpha:]_][[:alnum:]_]*)(\[([[:blank:]]*[[:alnum:]_]+[[:blank:]]*|@)\])?(([#%/]|:?[-=?+])[^}]*\}|\[|\})"
 # Fix $ inside strings
 color yellow "[$]"
+color yellow "\<$_\>"
 
 # Trailing whitespace.
 color ,green "[[:space:]]+$"
